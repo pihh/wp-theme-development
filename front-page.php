@@ -1,11 +1,35 @@
 <?php 
     get_header( )
 ?>
-    <div class="main-wrapper">
-	    <header class="page-title theme-bg-light text-center gradient py-5">
-			<h1 class="heading">Blog Home Page Heading</h1>
-		</header>
+
 		<article class="content px-3 py-5 p-md-5">
+
+            <?php 
+                if(have_posts(  )){
+                    while(have_posts(  )){
+						/*
+                        the_post(  );
+                        ?>
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_content(); ?></p>
+                        <?php
+						*/
+						the_post();
+						get_template_part( 'template-parts/content' ,'article');
+                    }
+                }
+
+            ?>
+       
+	    </article>
+	    
+    
+<?php 
+    get_footer(  )
+
+?>
+
+     <!--
 	    <div class='container'>
 			<p class="mt-3 lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
 
@@ -58,17 +82,4 @@
 				  </div>
 				</div>
 		</div>
-	    </article>
-	    <footer class="footer text-center py-2 theme-bg-dark">
-		   
-            <p class="copyright"><a href="https://youtube.com/FollowAndrew">FollowAndrew</a></p>
-		   
-	    </footer>
-    
-    </div>
-    
-<?php 
-    get_footer(  )
-
-?>
-
+        -->
