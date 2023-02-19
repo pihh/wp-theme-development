@@ -6,15 +6,14 @@
         <div class="carousel-inner">
             <?php if (have_posts()) {
                 $post_idx = 1;
-                while (have_posts()) {
+                while ($post_idx < 4) {
 
-                    the_post();
-
+                   
                     ?>
                     <div class="carousel-item <?php if ($post_idx == 1) { ?> active <?php } ?>">
-                        <a href="<?php echo get_the_permalink(); ?>">
-                            <img src="<?php the_post_thumbnail_url(); ?>" class="d-block w-100" alt="<?= $post_idx ?>">
-                        </a>
+                       
+                        <img src="https://place-hold.it/800x450?text=<?= $post_idx; ?>&fontsize=23" class="d-block w-100" alt="">
+                        
                     </div>
                     <?php
                     $post_idx++;
