@@ -1,7 +1,7 @@
 /*
 Theme Name: WpThemeDevelopment
 Text Domain: WpThemeDevelopment
-Version: 0.0.4
+Version: 0.0.7
 */
 :root {
     --blue: #007bff;
@@ -770,3 +770,57 @@ span.page-numbers{
 }
 
 
+.comment-reply-link{
+    margin: 0 0 1rem 1.5rem;
+}
+.reply{
+    
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--font-small);
+    font-weight: 600;
+    justify-content: flex-start;
+    letter-spacing: 0.030833333em;
+    line-height: 1;
+    margin: 1.5rem 0 -1rem -1.5rem;
+    text-transform: uppercase;
+
+}
+
+.comment >p{
+    width: 100%;
+    background-color: var(--lightgray);
+    padding: 0.5em;
+}
+
+.logged-in-as{
+    font-size: 1rem;
+}
+
+.required{
+    color: red;
+}
+
+.comment-respond #submit {
+    display: block;
+    background-color: var(--primary);
+    border-radius: 2px;
+    color: #fff;
+    display: block;
+    padding: 0.7rem;
+    border: none;
+}
+
+.comment-respond textarea {
+    height: 15rem;
+    width: 100%;
+    border-radius: 0.5em;
+    border: 1px solid lightgrey;
+}
+
+.comment-respond .comment-notes, .comment-respond .logged-in-as {
+
+    font-size: 1rem;
+
+}
