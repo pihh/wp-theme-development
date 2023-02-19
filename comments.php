@@ -11,7 +11,7 @@
                 if(!have_comments()){
                     echo 'No comments';
                 }else{
-                    echo get_comment_count( ); 
+                    get_comment_count( ); 
                 }
             ?>
         </h2><!-- .comments-title -->
